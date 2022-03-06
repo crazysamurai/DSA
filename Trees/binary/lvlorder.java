@@ -1,27 +1,48 @@
-public void levelOrder(TreeNode root) {
-    Queue<TreeNode> q = new LinkedList<>();
-    
-    if(root == null) return;
-    
-    q.add(root);
-    q.add(null); //important
-    
-    while(!q.isEmpty()){
-        TreeNode curr = q.poll();
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public List<List<Integer>> levelOrder(TreeNode root) {
         
-        if(curr==null){ //this loop helps in determining the change in level 
-            if(q.isEmpty()) return;
-            System.out.println("");
-            q.add(null);
-        }else{
-            System.out.println(curr.val+" ");
-            if(curr.left!=null){
-                q.add(curr.left);
+        Queue<TreeNode> store = new LinkedList<>();
+        List<List<Integer>> ans = new ArrayList<>();
+        List<Integer> ls = new ArrayList<>();
+        
+        if(root == null) return ans;
+        
+        store.add(root);
+        store.add(null);
+        
+        while(!store.isEmpty()){
+            TreeNode curr = store.poll();
+            
+            if(curr==null){
+                if(store.isEmpty()){
+                    ans.add(new ArrayList(ls));
+                    return ans;
+                }
+                ans.add(new ArrayList(ls));
+                ls.clear();
+                store.add(null);
+                continue;
             }
-            if(curr.right!=null){
-                q.add(curr.right);
-            }      
-        }  
+            
+            ls.add(curr.val);
+            if(curr.left!=null) store.add(curr.left);
+            if(curr.right!=null)store.add(curr.right);
+        }
+        return ans;
     }
-    return;
 }
