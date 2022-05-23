@@ -25,7 +25,7 @@ class Solution {
         vis[i] = true;
         
         while(!q.isEmpty()){
-            int curr = q.peek().first;
+            int curr = q.peek().first; // q.peek() = <first, second>
             int prev = q.peek().second;
             q.remove(); //remove the prev node since it's not needed anymore
             
