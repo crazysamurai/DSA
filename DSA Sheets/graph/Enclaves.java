@@ -13,30 +13,34 @@ class Solution {
 
         // top row
         for (int i = 0; i < m; i++) {
-            if (grid[0][i] == 1 && vis[0][i] == 0)
+            if (grid[0][i] == 1 && vis[0][i] == 0) {
                 q.add(new Pair(0, i));
-            vis[0][i] = 1;
+                vis[0][i] = 1;
+            }
         }
 
         // left col
         for (int i = 0; i < n; i++) {
-            if (grid[i][0] == 1 && vis[i][0] == 0)
+            if (grid[i][0] == 1 && vis[i][0] == 0) {
                 q.add(new Pair(i, 0));
-            vis[i][0] = 1;
+                vis[i][0] = 1;
+            }
         }
 
         // bottom row
         for (int i = 0; i < m; i++) {
-            if (grid[n - 1][i] == 1 && vis[n - 1][i] == 0)
+            if (grid[n - 1][i] == 1 && vis[n - 1][i] == 0) {
                 q.add(new Pair(n - 1, i));
-            vis[n - 1][i] = 1;
+                vis[n - 1][i] = 1;
+            }
         }
 
         // right col
         for (int i = 0; i < n; i++) {
-            if (grid[i][m - 1] == 1 && vis[i][m - 1] == 0)
+            if (grid[i][m - 1] == 1 && vis[i][m - 1] == 0) {
                 q.add(new Pair(i, m - 1));
-            vis[i][m - 1] = 1;
+                vis[i][m - 1] = 1;
+            }
         }
 
         bfs(q, grid, vis, drow, dcol);
