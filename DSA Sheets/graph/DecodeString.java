@@ -1,48 +1,54 @@
+
 //stack solution
+import java.util.*;
+
 class Solution {
     public String decodeString(String s) {
         Stack<Character> st = new Stack<>();
-        
-        for(int i = 0; i<s.length(); i++){
+
+        for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            
-            if(ch!=']'){
+
+            if (ch != ']') {
                 st.push(ch);
-            }else{
+            } else {
                 StringBuilder ss = new StringBuilder();
-                while(st.peek() != '['){
-                    ss.insert(0,st.pop());
+                while (st.peek() != '[') {
+                    ss.insert(0, st.pop());
                 }
                 st.pop();
-                
+
                 StringBuilder num = new StringBuilder();
-                while((!st.isEmpty()) && Character.isDigit(st.peek())){
-                    num.insert(0,st.pop());
+                while ((!st.isEmpty()) && Character.isDigit(st.peek())) {
+                    num.insert(0, st.pop());
                 }
                 int k = Integer.valueOf(num.toString());
-                
+
                 String str = ss.toString();
-                while(k>0){
-                    for(int j = 0; j<str.length(); j++){
+                while (k > 0) {
+                    for (int j = 0; j < str.length(); j++) {
                         st.push(str.charAt(j));
                     }
                     k--;
                 }
-                
+
             }
         }
         StringBuilder ans = new StringBuilder();
-        while(!st.isEmpty()) ans.insert(0,st.pop());
+        while (!st.isEmpty())
+            ans.insert(0, st.pop());
         return ans.toString();
-    }
-}
+    }}
 
-//graph solution
+    // graph solution
 
-//The idea is: for the string in [ ] pair, we can recurse it as the source string. The codes go into the lower level at '[', and back to parent at ']'.
-// The int pos is a globle parameter to indicate the current index of char in the String s.
+    // The idea is: for the string in [ ] pair, we can recurse it as the source
+    // string. The codes go into the lower level at '[', and back to parent at ']'.
+    // The int pos is a globle parameter to indicate the current index of char in
+    // the String s.
 
-private int pos = 0;
+    private int pos = 0;
+
 public String decodeString(String s) {
     int n = s.length(), repeat = 0;
     StringBuilder buf = new StringBuilder();

@@ -1,3 +1,5 @@
+import java.util.*;
+
 class Solution {
     // Function to detect cycle in a directed graph.
     public boolean isCyclic(int V, ArrayList<ArrayList<Integer>> adj) {
@@ -28,7 +30,7 @@ class Solution {
         return false;
     }
 
-    // using 2 arrys visted and path visited
+    // using 2 arrys visited and path visited
     public static boolean dfs(ArrayList<ArrayList<Integer>> adj, int[] vis, int pathVis[], int idx) {
         vis[idx] = 1;
         pathVis[idx] = 1;
