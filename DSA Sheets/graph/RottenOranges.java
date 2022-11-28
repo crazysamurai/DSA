@@ -28,6 +28,9 @@ class Solution {
     public int bfs(int[][] grid, int[][] vis, int n, int m, int[] rd, int[] cd) {
         Queue<Pair> q = new LinkedList<Pair>();
         int fresh = 0;// count the number of fresh oranges
+
+        // this for loop is for counting fresh oranges and adding the rotten oranges in
+        // the queue
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {
                 if (grid[i][j] == 2) {
@@ -46,7 +49,7 @@ class Solution {
             int col = q.peek().second;
             int t = q.peek().time;
             q.remove();
-            ans = t;// store the time val
+            ans = t;// store the total time
 
             for (int i = 0; i < 4; i++) {
                 int newRow = row + rd[i];
