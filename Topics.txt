@@ -1,0 +1,14 @@
+1. prefix sum
+    https://leetcode.com/problems/longest-subsequence-with-limited-sum/
+
+2. binary search
+    https://leetcode.com/problems/longest-subsequence-with-limited-sum/
+
+3. greedy
+    https://leetcode.com/problems/jump-game/description/
+    https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
+
+4. monotonic stack
+
+5. priority queue
+    https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/
