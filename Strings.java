@@ -1,4 +1,3 @@
-import java.util.*;
 /*
  * 1. Strings are immutable in java:
  * https://www.youtube.com/watch?v=to9DPVsdByE
@@ -84,3 +83,7 @@ public class Strings {
         System.out.println(newSb);
     }
 }
+
+//Alphabets to numbers
+char ch = 'h';
+int pos = ch - 'a' + 1;

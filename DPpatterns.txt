@@ -1,0 +1,31 @@
+Identify DP:
+1. recursion problem
+2. choice in problem
+3. optimal solution (min, max, greatest, smallest, etc)
+
+STEPS: recursion -> memoization -> Top-Down
+
+1. 0-1 Knapsack
+Identification : choice in problem
+                 min, max, limit
+    subset sum
+    equal sum
+    count of subset sum
+    target sum
+    number of subset sum with given different
+
+2. Unbounded Knapsack
+
+3. Fibonacci
+
+4. LCS
+
+5. LIS
+
+6. Kadane's Algo
+
+7. Matrix Chain Multiplication
+
+8. DP on Trees
+
+9. DP on Grid

@@ -1,6 +1,4 @@
-public class Typecasting {
 
-}
 /*
  * Changing datatype - typecasting
  * smaller datatype to a larger datatype - widening typecasting - Automatically

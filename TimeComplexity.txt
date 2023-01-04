@@ -1,0 +1,44 @@
+The rate at which the time taken increases with respect to input size. It is measured using Big-Oh Notation, O(Time Taken).
+
+Rules:
+1. Evaluate TC for worst case
+2. avoid constants
+3. avoid small values
+
+for(i=1; i<5; i++){
+    print "something";
+}
+Runs for 5 times and does three operations each time, increment, check & print, so in total it does 15ops, i.e O(15).
+If the loop runs for N times, the TC becomes O(N * 3).
+
+The Best, The worst and The Average:
+
+if(marks<25) print "D"
+else if(marks<45) print "C"
+else if(marks<65) print "B"
+else print "A";
+
+Best case: marks=10 O(2)  omega
+worst case: marks=70 O(4) big-oh
+Average: (best+case)/2; theta
+
+Worst case is the one that we always consider because the system we are building is to be used by multiple users with different use cases, so if we make our coded scalable and efficient for the worst case it'll automatically get better for other cases.
+
+Examples:
+
+for(i = 0; i<n; i++){
+    for(int j = 0; j<n; j++){
+        //some code here of contant time
+    }
+}
+
+TC: O(n^2), for each value of i, the inner loop runs n times
+
+for(i = 0; i<n; i++){
+    for(int j = 0; j<=i; j++){
+        //some code here of contant time
+    }
+}
+The number of operations for each value of i increase by 1, for i = 1, inner loop runs 2 times and for i=2, 3 times and so on till i=n-1 when it runs for n-1 times
+1+2+3+...+n = (n(n+1))/2 sum of n natural nos
+TC: O((n^2)/2 + n/2) => O((n^2)/2) => O(n^2)
