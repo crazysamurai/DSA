@@ -1,0 +1,87 @@
+**Digits**
+
+1. extraction of digits:
+    7789 % 10 = 9
+    7789 / 10 = 778
+    778 % 10 = 8
+    ...
+
+    while(n>0){
+        digit = n%10;
+        n = n/10;
+    }
+    TC: O(log N)
+
+2. Reverse number:
+    reverseNumber = reverseNumber*10 + lastDigit;
+
+3. Palindrome number:
+    if(reverseNumber == originalNumber) return true;
+
+4. Armstrong number
+    n = 371
+    => 3^3 + 7^3 + 1^3 = 371
+
+    n = 1634
+    => 1^4 + 6^4 + 3^4 + 4^4
+
+    if the sum of all the digits raised to the power of number of digits in the number is the number itself then it is an armstrong number.
+
+5. Print all divisors / factors
+    36 - 1,2,3,4,6,9,12,18,36
+
+    all factors will be b/w 1 & n
+    so loop from 1 to n and check if(n % i == 0) 
+    TC:O(n);
+
+    but we can get a better complexity by this observation:
+
+    i * n/i
+    1 * 36 if we loop till n, then we will be covering the same factors twice like here we have divided them into two parts by a line from where they start to repeat
+    2 * 18  
+    3 * 12
+    4 * 9
+    6 * 6
+  ----------
+    4 * 9
+    3 * 12
+    2 * 18
+    1 * 36
+
+    if we just loop till sqrt(n), then we can get all the factors
+    for(i = 0 to sqrt(n)){ //replce sqrt with i*i<=n
+        if(n%i == 0) {
+            print i;
+            if(n/i != 1) print n/i; // when i = 6 && n/i = 6
+        }
+    }
+
+    tc: O(sqrt(n))
+
+6. check for prime
+    prime: a number that has 2 factors, 1 and itself
+
+    int count = 0;
+    for(i = 1 to i*i<=n){
+        if(n%i == 0) {
+            count++;
+            if(n/i != 1) count++;
+        }
+    }
+    if(count == 2) print(prime);
+    else (not prime);
+
+    tc: O(sqrt(n))
+
+7. GCD / HCF (greatest common divisor / highest common factor)
+
+    int gcd = 0;
+    for(i = min(n1,n2)) to i>=1{
+        if(n1 % i == 0 && n2 % i == 0){
+            gcd = i;
+            break;
+        }
+    }
+
+    tc:O(min(n1,n2))
+

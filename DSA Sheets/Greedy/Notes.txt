@@ -1,0 +1,5 @@
+Some techniques to follow:
+1. searching
+2. sorting
+3. pq
+

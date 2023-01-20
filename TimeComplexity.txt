@@ -42,3 +42,10 @@ for(i = 0; i<n; i++){
 The number of operations for each value of i increase by 1, for i = 1, inner loop runs 2 times and for i=2, 3 times and so on till i=n-1 when it runs for n-1 times
 1+2+3+...+n = (n(n+1))/2 sum of n natural nos
 TC: O((n^2)/2 + n/2) => O((n^2)/2) => O(n^2)
+
+NOTE: if the number of iterations depends on division then log will be added to the complexity.
+ex:    while(n>0){
+        digit = n%10;
+        n = n/10;
+        }
+TC: O(log N)

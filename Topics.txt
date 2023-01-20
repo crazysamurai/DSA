@@ -7,9 +7,12 @@
 3. greedy
     https://leetcode.com/problems/jump-game/description/
     https://leetcode.com/problems/maximum-bags-with-full-capacity-of-rocks/description/
+    https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/description/
+    https://leetcode.com/problems/maximum-ice-cream-bars/description/
 
 4. monotonic stack
 
 5. priority queue
     https://leetcode.com/problems/remove-stones-to-minimize-the-total/description/
     
+6. meet in the middle

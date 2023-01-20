@@ -10,12 +10,12 @@ Identification : choice in problem
                  min, max, limit
     subset sum
     equal sum
-    count of subset sum
+    count of subset sum / perfect sum subset
     target sum
-    number of subset sum with given different
+    number of subset sum with given difference
 
 2. Unbounded Knapsack
-
+    
 3. Fibonacci
 
 4. LCS
