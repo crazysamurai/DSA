@@ -45,7 +45,7 @@ public class Strings {
         System.out.println(s.indexOf("bdj"));// 8
         System.out.println(s.indexOf("xyz")); // -1
 
-        // contains() checcks if the given substring exists or not
+        // contains() checks if the given substring exists or not
         System.out.println(s.contains("bdj"));// true
 
         // toLowerCase & toUpperCase alters the case of the string and saves it as a new
