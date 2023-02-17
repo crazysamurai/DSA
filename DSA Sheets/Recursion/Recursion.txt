@@ -1,0 +1,11 @@
+Recursion -> decision + choices
+
+Recursive tree:
+                  ip/op
+                  /   \
+            ip1/op1    ip2/op2
+            /  \          /  \
+
+-> the input gets smaller on each step
+-> each branch represents a decision
+-> no. of branches = no. of decisions
